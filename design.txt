@@ -1,0 +1,38 @@
+user_profile REL youtube_account
+
+1. one user profile email can have one or zero you tube account (ZERO or ONE) - user can have 1 acc -  max 
+                                                        |      
+                                                     user can have 0 acc - min 
+2. for a youtube account, belongs to one and only one user - max is 1 
+                                                        |
+                                                        min is 1        
+
+
+->1 youtube account(indirectly(gmail account) can have multiple youtube channel)-<
+youtube_account REL youtube_channel
+
+(in order to have youtube account there must be one youtube channel)
+A single youtube account can have 1 or many channel  - max is > 1 (many)
+                                                  |
+                                                  min - 1      
+
+[for youtube channel to exist, it must belongs to 1 youtube acc]
+also we don't want  youtube account to belongs to multiple youtube account (conditions)
+(A youtube channel must have or belong to 1 and 1 only youtube account)1 youtube account - max - 1
+                                           |
+                                           min - 1
+
+
+                               channel 1 -----------> youtube acc1     
+ 1 youtube account ----->      channel 2 -----------> youtube acc1
+                               channel n -----------> youtube acc1
+
+
+
+M:M realtionship
+
+ - 1 youtube account (1 email) can subscribe in 0(min) or many(max) youtube channel
+ - in that specific channel, one and only one subscriber with that YT account can be
+
+
+ - 1 youtube channel can have O(min) or many(max) subscribers 
