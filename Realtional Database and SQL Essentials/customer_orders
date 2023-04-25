@@ -1,0 +1,18 @@
+-- SELECT * From customer
+-- JOIN customer_order ON customer.id = customer_order.customer_id
+-- JOIN order_item ON customer_order.id = order_item.order_id
+-- JOIN product p on order_item.product_id = p.id
+
+-- we want that customer that have order and do not have any order as well
+-- LEFT JOINS
+
+
+
+SELECT * from customer
+-- JOIN customer_order on customer.id = customer_order.customer_id -- normal join, inner join
+-- every data from left table and matching from right , left table
+LEFT JOIN customer_order on customer.id = customer_order.customer_id;
+
+-- only from left table no matching from right table
+SELECT * from customer
+LEFT JOIN customer_order on customer.id = customer_order.customer_id where customer_id = null
